@@ -8,11 +8,15 @@ function classNames(...classes) {
 }
 
 const PluginCard = (props) => {
-  const { title, subtitle, tag, color, image } = props;
+  const { title, subtitle, tag, color, image, link } = props;
+
   return (
-    <div
+    <a
       className="space-y-2 rounded-xl border border-neutral-200 p-4 transition-all ease-in-out hover:cursor-pointer hover:border-teal-600 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-900
     "
+      href={link}
+      target="_blank"
+      rel="noreferrer"
     >
       <div className="flex w-full justify-between pb-2">
         <Image
@@ -40,7 +44,7 @@ const PluginCard = (props) => {
       <subheadline className="block font-mono text-sm text-neutral-500 dark:text-neutral-400">
         {subtitle}
       </subheadline>
-    </div>
+    </a>
   );
 };
 

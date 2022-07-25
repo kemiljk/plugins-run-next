@@ -35,6 +35,7 @@ export default function Home({ mades }) {
             return (
               <PluginCard
                 key={made.id}
+                link={made.metadata.url}
                 image={made.metadata.cover.imgix_url}
                 title={made.title}
                 subtitle={made.metadata.subtitle}
