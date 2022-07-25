@@ -8,8 +8,8 @@ import Logo from "../components/Logo";
 const Cosmic = require("cosmicjs");
 const api = Cosmic();
 
-const BUCKET_SLUG = process.env.COSMIC_SLUG;
-const READ_KEY = process.env.COSMIC_READ_KEY;
+const BUCKET_SLUG = NEXT_PUBLIC.COSMIC_SLUG;
+const READ_KEY = NEXT_PUBLIC.COSMIC_READ_KEY;
 
 const bucket = api.bucket({
   slug: BUCKET_SLUG,
