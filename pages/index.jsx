@@ -20,7 +20,6 @@ export default function Home({ mades }) {
   const title = "The home for Figma utility plugins";
   const subtitle =
     "A series of free utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies.";
-
   return (
     <>
       <Head>
@@ -31,19 +30,13 @@ export default function Home({ mades }) {
       <div className="flex-col">
         <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
           {mades.map((made) => {
-            console.log(made.metadata.platform[0]);
             return (
               <PluginCard
                 key={made.id}
                 image={made.metadata.cover.imgix_url}
                 title={made.title}
                 subtitle={made.metadata.subtitle}
-                tag={made.metadata.platform[0].figma ? "Figma" : "FigJam"}
-                color={
-                  made.metadata.platform[0].figma
-                    ? "border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900 dark:bg-blue-900/30 dark:text-blue-200"
-                    : "text-pink-700 dark:text-pink-200 bg-pink-50 dark:bg-pink-900/30 border border-pink-200 dark:border-pink-900"
-                }
+                tags={made.metadata.platform}
               />
             );
           })}
