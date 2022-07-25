@@ -13,4 +13,11 @@
   a.nav[aria-current] {
     @apply border-b-2 border-teal-700 font-bold text-black dark:text-white;
   }
+  a.inline-link {
+    @apply font-bold text-black underline decoration-teal-500 decoration-2 underline-offset-4 transition ease-in-out hover:text-teal-500 dark:text-white;
+  }
+
+  p {
+    @apply pt-4 text-neutral-500 dark:text-neutral-300;
+  }
 }

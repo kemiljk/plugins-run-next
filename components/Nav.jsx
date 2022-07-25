@@ -26,12 +26,6 @@ const Nav = () => {
                   <NavLink href="/about">
                     <a className="nav">About</a>
                   </NavLink>
-                  <NavLink href="/figma">
-                    <a className="nav">Figma</a>
-                  </NavLink>
-                  <NavLink href="/figjam">
-                    <a className="nav">FigJam</a>
-                  </NavLink>
                 </div>
               </div>
               <Spacer />

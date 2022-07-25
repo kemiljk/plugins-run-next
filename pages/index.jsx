@@ -3,12 +3,13 @@ import Head from "next/head";
 import HeaderView from "../components/HeaderView";
 import SubheaderView from "../components/SubHeaderView";
 import PluginCard from "../components/PluginCard";
+import Logo from "../components/Logo";
 
 const Cosmic = require("cosmicjs");
 const api = Cosmic();
 
-const BUCKET_SLUG = "kemiljk";
-const READ_KEY = "uNXYQDbNTCWQyEaFjq44PUolieGKBuzePTaEdnDl0CHLcnJtPK";
+const BUCKET_SLUG = process.env.COSMIC_SLUG;
+const READ_KEY = process.env.COSMIC_READ_KEY;
 
 const bucket = api.bucket({
   slug: BUCKET_SLUG,
@@ -26,12 +27,12 @@ export default function Home({ mades }) {
       <Head>
         <title>{metaTitle}</title>
       </Head>
+      <Logo />
       <HeaderView>{title}</HeaderView>
       <SubheaderView>{subtitle}</SubheaderView>
       <div className="flex-col">
         <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
           {mades.map((made) => {
-            console.log(made.metadata.platform[0]);
             return (
               <PluginCard
                 key={made.id}

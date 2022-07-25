@@ -29,8 +29,8 @@ const PluginCard = ({ title, subtitle, image, link, tags }) => {
         />
         <ExternalLinkIcon width={20} height={20} className="text-neutral-500" />
       </div>
-      <div className="flex w-full items-center gap-4">
-        <headline className="text-md block font-bold text-neutral-700 dark:text-neutral-200">
+      <div className="flex w-full items-center gap-2">
+        <headline className="text-md mr-2 block font-bold text-neutral-700 dark:text-neutral-200">
           {title}
         </headline>
         {validTags.map((tag, id) => {
