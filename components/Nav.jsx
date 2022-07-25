@@ -6,9 +6,9 @@ const Nav = () => {
   return (
     <div className="min-h-full">
       <div as="nav" className="bg-neutral-100 dark:bg-neutral-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex w-full justify-between items-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex h-16 items-center justify-between">
+            <div className="flex w-full items-center justify-between">
               <div className="flex flex-shrink-0 items-center">
                 <Image
                   className="rounded-lg"
@@ -21,16 +21,16 @@ const Nav = () => {
               <div className="block">
                 <div className="flex items-baseline space-x-4">
                   <NavLink href="/">
-                    <a>Home</a>
+                    <a className="nav">Home</a>
                   </NavLink>
                   <NavLink href="/about">
-                    <a>About</a>
+                    <a className="nav">About</a>
                   </NavLink>
                   <NavLink href="/figma">
-                    <a>Figma</a>
+                    <a className="nav">Figma</a>
                   </NavLink>
                   <NavLink href="/figjam">
-                    <a>FigJam</a>
+                    <a className="nav">FigJam</a>
                   </NavLink>
                 </div>
               </div>
