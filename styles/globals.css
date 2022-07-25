@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-black;
+  }
+
+  a {
+    @apply px-3 py-2 rounded-md text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:bg-neutral-300 dark:hover:bg-neutral-700 hover:text-neutral-800 dark:hover:text-white;
+  }
+  a[aria-current] {
+    @apply bg-neutral-900 text-white;
+  }
+}
