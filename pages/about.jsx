@@ -12,6 +12,7 @@ export default function About() {
     <div className="mx-auto w-full max-w-3xl">
       <Head>
         <title>{metaTitle}</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeaderView>{title}</HeaderView>
       <SubheaderView>

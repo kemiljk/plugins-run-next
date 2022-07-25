@@ -21,11 +21,42 @@ export default function Home({ mades }) {
   const title = "The home for Figma utility plugins";
   const subtitle =
     "A series of free utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies.";
+  const description =
+    "A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free.";
+  const metaImage =
+    "https://imgix.cosmicjs.com/a8c215c0-927a-11ec-9a4e-05fc85d83574-meta.png";
 
   return (
     <>
       <Head>
         <title>{metaTitle}</title>
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+
+        <meta name="title" content={metaTitle} />
+        <meta
+          name="description"
+          content="A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free."
+        />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.plugins.run/" />
+        <meta property="og:title" content={metaTitle} />
+        <meta
+          property="og:description"
+          content="A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free."
+        />
+        <meta property="og:image" content={metaImage} />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.plugins.run/" />
+        <meta property="twitter:title" content={metaTitle} />
+        <meta
+          property="twitter:description"
+          content="A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free."
+        />
+        <meta property="twitter:image" content={metaImage} />
       </Head>
       <Logo />
       <HeaderView>{title}</HeaderView>
