@@ -28,7 +28,7 @@ const PluginCard = (props) => {
         />
         <ExternalLinkIcon width={20} height={20} className="text-neutral-500" />
       </div>
-      <div className="flex w-full gap-4">
+      <div className="flex w-full items-center gap-4">
         <headline className="text-md block font-bold text-neutral-700 dark:text-neutral-200">
           {title}
         </headline>
