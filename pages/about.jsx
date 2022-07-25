@@ -9,24 +9,24 @@ export default function About() {
   const title = "About";
 
   return (
-    <div className="w-ful mx-auto max-w-3xl">
+    <div className="mx-auto w-full max-w-3xl">
       <Head>
         <title>{metaTitle}</title>
       </Head>
       <HeaderView>{title}</HeaderView>
-      <div>
-        <SubheaderView>
-          A huge set of utility plugins, made by{" "}
-          <a
-            className="inline-link"
-            href="https://www.kejk.tech"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Karl Emil James Koch
-          </a>
-          , for Figma and FigJam, for free.
-        </SubheaderView>
+      <SubheaderView>
+        A huge set of utility plugins, made by{" "}
+        <a
+          className="inline-link"
+          href="https://www.kejk.tech"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Karl Emil James Koch
+        </a>
+        , for Figma and FigJam, for free.
+      </SubheaderView>
+      <div className="px-4 lg:px-0">
         <h3 className="pt-4 text-xl font-semibold text-black dark:text-white">
           {"How it started"}
         </h3>

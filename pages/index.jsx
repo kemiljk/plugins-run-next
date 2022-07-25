@@ -30,7 +30,7 @@ export default function Home({ mades }) {
       <Logo />
       <HeaderView>{title}</HeaderView>
       <SubheaderView>{subtitle}</SubheaderView>
-      <div className="flex-col">
+      <div className="flex-col px-4 lg:px-0">
         <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
           {mades.map((made) => {
             return (
