@@ -6,7 +6,7 @@ import { CursorClickIcon, MailIcon } from "@heroicons/react/outline";
 
 export default function About() {
   const metaTitle = "Plugins.run | About";
-  const title = "About";
+  const title = "What is Plugins.run?";
 
   return (
     <div className="mx-auto w-full max-w-3xl">
