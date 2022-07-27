@@ -4,31 +4,32 @@ import SubheaderView from "../components/SubheaderView";
 import Button from "../components/Button";
 import { CursorClickIcon, MailIcon } from "@heroicons/react/outline";
 
-export default function About() {
-  const metaTitle = "Plugins.run | About";
-  const title = "What is Plugins.run?";
+const Cosmic = require("cosmicjs");
+const api = Cosmic();
 
+const BUCKET_SLUG = process.env.NEXT_PUBLIC_COSMIC_SLUG;
+const READ_KEY = process.env.NEXT_PUBLIC_COSMIC_READ_KEY;
+
+const bucket = api.bucket({
+  slug: BUCKET_SLUG,
+  read_key: READ_KEY,
+});
+
+export default function About({ about }) {
+  const metaTitle = "Plugins.run | About";
+  // const title = "What is Plugins.run?";
+  console.log(about[0]);
   return (
     <div className="mx-auto w-full max-w-3xl">
       <Head>
         <title>{metaTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HeaderView>{title}</HeaderView>
-      <SubheaderView>
-        A huge set of utility plugins, made by{" "}
-        <a
-          className="inline-link"
-          href="https://www.kejk.tech"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Karl Emil James Koch
-        </a>
-        , for Figma and FigJam, for free.
-      </SubheaderView>
+      <HeaderView>{about[0].title}</HeaderView>
+      <SubheaderView>{about[0].metadata.subtitle}</SubheaderView>
       <div className="px-4 lg:px-0">
-        <h3 className="pt-4 text-xl font-semibold text-black dark:text-white">
+        <p>{about[0].content}</p>
+        {/* <h3 className="pt-4 text-xl font-semibold text-black dark:text-white">
           {"How it started"}
         </h3>
         <p>
@@ -76,7 +77,7 @@ export default function About() {
           {
             " and I'd be genuinely happy if they did. That's why I keep each of my plugins completely, 100% free. These are an admission that core functionality is missing and I'd love to see the day each one is slowly added in to the core Figma and/or FigJam experience."
           }
-        </p>
+        </p> */}
         <div className="mx-auto mt-8 flex w-full justify-center space-x-4">
           <Button
             bgColor="neutral-100"
@@ -106,4 +107,20 @@ export default function About() {
       </div>
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const data = await bucket.getObjects({
+    query: {
+      type: "about",
+      slug: "what-is-pluginsrun",
+    },
+    props: "title,content,metadata",
+  });
+  const about = await data.objects;
+  return {
+    props: {
+      about,
+    },
+  };
 }
