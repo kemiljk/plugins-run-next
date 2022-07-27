@@ -7,7 +7,7 @@ function classNames(...classes) {
 }
 
 const PluginCard = ({ title, subtitle, image, link, tags }) => {
-  const validTags = Object.entries(...tags).map((entry) => {
+  const validTags = Object.entries(tags).map((entry) => {
     return entry[1] === true ? entry[0] : null;
   });
 
@@ -39,7 +39,7 @@ const PluginCard = ({ title, subtitle, image, link, tags }) => {
             <div
               key={id}
               className={classNames(
-                "flex w-max items-center justify-center rounded-lg border px-3 py-1 font-mono text-xs font-normal uppercase",
+                "flex w-max items-center justify-center rounded-lg border px-3 py-1 font-mono text-xs font-normal uppercase leading-tight",
                 tag === "figma"
                   ? "border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900 dark:bg-blue-900/30 dark:text-blue-200"
                   : "border border-pink-200 bg-pink-50 text-pink-700 dark:border-pink-900 dark:bg-pink-900/30 dark:text-pink-200"

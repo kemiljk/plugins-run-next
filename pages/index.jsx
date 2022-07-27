@@ -16,7 +16,7 @@ const bucket = api.bucket({
   read_key: READ_KEY,
 });
 
-export default function Home({ mades }) {
+export default function Home({ plugins }) {
   const metaTitle = "Plugins.run | Home";
   const title = "The home for Figma utility plugins";
   const subtitle =
@@ -63,12 +63,12 @@ export default function Home({ mades }) {
       <SubheaderView>{subtitle}</SubheaderView>
       <div className="flex-col px-4 lg:px-0">
         <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-          {mades.map((made) => {
+          {plugins.map((made) => {
             return (
               <PluginCard
                 key={made.id}
                 link={made.metadata.url}
-                image={made.metadata.cover.imgix_url}
+                image={made.metadata.icon.imgix_url}
                 title={made.title}
                 subtitle={made.metadata.subtitle}
                 tags={made.metadata.platform}
@@ -84,14 +84,14 @@ export default function Home({ mades }) {
 export async function getStaticProps() {
   const data = await bucket.getObjects({
     query: {
-      type: "mades",
+      type: "plugins",
     },
-    props: "id,slug,title,content,metadata",
+    props: "id,title,content,metadata",
   });
-  const mades = await data.objects;
+  const plugins = await data.objects;
   return {
     props: {
-      mades,
+      plugins,
     },
   };
 }
