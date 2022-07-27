@@ -41,7 +41,7 @@ export default function Home({ plugins }) {
         />
 
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.plugins.run/" />
+        <meta property="og:url" content="https://www.plugins.run" />
         <meta property="og:title" content={metaTitle} />
         <meta
           property="og:description"
@@ -50,7 +50,7 @@ export default function Home({ plugins }) {
         <meta property="og:image" content={metaImage} />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.plugins.run/" />
+        <meta property="twitter:url" content="https://www.plugins.run" />
         <meta property="twitter:title" content={metaTitle} />
         <meta
           property="twitter:description"
@@ -68,7 +68,7 @@ export default function Home({ plugins }) {
               <PluginCard
                 key={made.id}
                 link={made.metadata.url}
-                image={made.metadata.cover.imgix_url}
+                image={made.metadata.icon.imgix_url}
                 title={made.title}
                 subtitle={made.metadata.subtitle}
                 tags={made.metadata.platform}

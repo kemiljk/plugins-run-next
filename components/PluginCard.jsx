@@ -7,7 +7,7 @@ function classNames(...classes) {
 }
 
 const PluginCard = ({ title, subtitle, image, link, tags }) => {
-  const validTags = Object.entries(...tags).map((entry) => {
+  const validTags = Object.entries(tags).map((entry) => {
     return entry[1] === true ? entry[0] : null;
   });
 
