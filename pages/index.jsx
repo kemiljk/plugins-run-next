@@ -56,7 +56,7 @@ export default function Home({ mades }) {
           property="twitter:description"
           content="A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free."
         />
-        <meta property="twitter:image" content={metaImage} />
+        <meta property="twitter:image:src" content={metaImage} />
       </Head>
       <Logo />
       <HeaderView>{title}</HeaderView>
