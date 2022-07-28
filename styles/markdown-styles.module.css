@@ -1,0 +1,30 @@
+.markdown {
+  @apply text-lg leading-relaxed;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-6 text-[16px] md:text-[18px];
+}
+
+.markdown h2 {
+  @apply mt-8 mb-4 text-2xl font-bold leading-snug;
+}
+
+.markdown h3 {
+  @apply mt-8 mb-4 text-xl font-bold leading-snug;
+}
+
+.markdown p a {
+  @apply underline;
+}
+
+.markdown ul li {
+  @apply mb-2 list-inside list-disc rounded p-2 text-[16px] font-semibold shadow-md md:text-[18px];
+}
+
+.markdown ol li {
+  @apply mb-2 list-inside list-decimal rounded p-2 text-[16px] font-semibold md:text-[18px];
+}
