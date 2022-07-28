@@ -29,55 +29,6 @@ export default function About({ about }) {
       <SubheaderView>{about.metadata.subtitle}</SubheaderView>
       <div className="px-4 lg:px-0">
         <p>{about.metadata.content}</p>
-        {/* <h3 className="pt-4 text-xl font-semibold text-black dark:text-white">
-          {"How it started"}
-        </h3>
-        <p>
-          {
-            "I started writing Figma plugins when I wanted to better learn Javascript. I did a Udemy course led by Morten Rand-Hendriksen on "
-          }
-          <a
-            className="inline-link"
-            href="https://www.linkedin.com/learning/javascript-essential-training/javascript-the-soil-from-which-the-modern-web-grows?autoplay=true"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Javascript basics
-          </a>
-          {", and in that course we made a Pixel to Em converter."}
-        </p>
-        <p>
-          {
-            "Once I decided I really wanted to build out my own Figma plugin to scratch the itch of easily converting the output pixels into em/rem. And this is how Hand››over ended up being born."
-          }
-        </p>
-        <p>
-          {
-            "Hand››over started with the ability to input a value and output it as em. Over time I built out functionality to include the current  selection values which started just as text and size but soon expanded to more and more things as I got to understand the Figma API."
-          }
-        </p>
-        <h3 className="pt-8 text-xl font-semibold text-black dark:text-white">
-          {"How it's going"}
-        </h3>
-        <p>
-          {
-            "Since that first plugin, released back in 2020, I've released 16 further utility plugins. The goal of these is to provide small solutions to common problems."
-          }
-        </p>
-        <p>
-          {"I see each of my plugins as an opportunity for Figma to "}
-          <a
-            href="https://www.howtogeek.com/297651/what-does-it-mean-when-a-company-sherlocks-an-app/"
-            className="inline-link"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Sherlock me
-          </a>
-          {
-            " and I'd be genuinely happy if they did. That's why I keep each of my plugins completely, 100% free. These are an admission that core functionality is missing and I'd love to see the day each one is slowly added in to the core Figma and/or FigJam experience."
-          }
-        </p> */}
         <div className="mx-auto mt-8 flex w-full justify-center space-x-4">
           <Button
             bgColor="neutral-100"
