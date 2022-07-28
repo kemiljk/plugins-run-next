@@ -18,17 +18,17 @@ const bucket = api.bucket({
 export default function About({ about }) {
   const metaTitle = "Plugins.run | About";
   // const title = "What is Plugins.run?";
-  console.log(about[0]);
+  console.log(about);
   return (
     <div className="mx-auto w-full max-w-3xl">
       <Head>
         <title>{metaTitle}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HeaderView>{about[0].title}</HeaderView>
-      <SubheaderView>{about[0].metadata.subtitle}</SubheaderView>
+      <HeaderView>{about.title}</HeaderView>
+      <SubheaderView>{about.metadata.subtitle}</SubheaderView>
       <div className="px-4 lg:px-0">
-        <p>{about[0].content}</p>
+        <p>{about.metadata.content}</p>
         {/* <h3 className="pt-4 text-xl font-semibold text-black dark:text-white">
           {"How it started"}
         </h3>
@@ -117,7 +117,7 @@ export async function getStaticProps() {
     },
     props: "title,content,metadata",
   });
-  const about = await data.objects;
+  const about = await data.objects[0];
   return {
     props: {
       about,
