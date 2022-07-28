@@ -2,6 +2,7 @@ import Head from "next/head";
 import HeaderView from "../components/HeaderView";
 import SubheaderView from "../components/SubheaderView";
 import Button from "../components/Button";
+import Markdown from "../components/Markdown";
 import { CursorClickIcon, MailIcon } from "@heroicons/react/outline";
 
 const Cosmic = require("cosmicjs");
@@ -18,7 +19,6 @@ const bucket = api.bucket({
 export default function About({ about }) {
   const metaTitle = "Plugins.run | About";
   // const title = "What is Plugins.run?";
-  console.log(about);
   return (
     <div className="mx-auto w-full max-w-3xl">
       <Head>
@@ -26,9 +26,10 @@ export default function About({ about }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeaderView>{about.title}</HeaderView>
-      <SubheaderView>{about.metadata.subtitle}</SubheaderView>
+      {/* Wherever you want your markdown parsed, just insert this Markdown component and pass the desired content to the content prop */}
+      <Markdown content={about.metadata.subtitle} className="text-center" />
       <div className="px-4 lg:px-0">
-        <p>{about.metadata.content}</p>
+        <Markdown content={about.metadata.content} />
         <div className="mx-auto mt-8 flex w-full justify-center space-x-4">
           <Button
             bgColor="neutral-100"
@@ -36,8 +37,7 @@ export default function About({ about }) {
             borderColor="neutral-200"
             darkBgColor="neutral-800"
             darkTextColor="white"
-            darkBorderColor="neutral-700"
-          >
+            darkBorderColor="neutral-700">
             <MailIcon width={24} height={24} />
             <a href="mailto:karl@kejk.tech?subject=Let's chat">Contact me</a>
           </Button>
@@ -47,8 +47,7 @@ export default function About({ about }) {
             borderColor="neutral-200"
             darkBgColor="neutral-800"
             darkTextColor="white"
-            darkBorderColor="neutral-700"
-          >
+            darkBorderColor="neutral-700">
             <CursorClickIcon width={24} height={24} />
             <a href="mailto:karl@kejk.tech?subject=Plugin request">
               Request a plugin
