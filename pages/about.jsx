@@ -20,7 +20,7 @@ export default function About({ about }) {
   const metaTitle = "Plugins.run | About";
   // const title = "What is Plugins.run?";
   return (
-    <div className="mx-auto w-full max-w-3xl">
+    <div className="px-4 lg:px-0 mx-auto w-full max-w-3xl">
       <Head>
         <title>{metaTitle}</title>
         <link rel="icon" href="/favicon.ico" />
@@ -28,7 +28,7 @@ export default function About({ about }) {
       <HeaderView>{about.title}</HeaderView>
       {/* Wherever you want your markdown parsed, just insert this Markdown component and pass the desired content to the content prop */}
       <Markdown content={about.metadata.subtitle} className="text-center" />
-      <div className="px-4 lg:px-0">
+      <div>
         <Markdown content={about.metadata.content} />
         <div className="mx-auto mt-8 flex w-full justify-center space-x-4">
           <Button
