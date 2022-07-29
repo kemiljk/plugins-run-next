@@ -28,7 +28,7 @@ export default function About({ about }) {
       <HeaderView>{about.title}</HeaderView>
       {/* Wherever you want your markdown parsed, just insert this Markdown component and pass the desired content to the content prop */}
       <div className="px-4 lg:px-0">
-      <Markdown content={about.metadata.subtitle} className="text-center" />
+      <Markdown content={about.metadata.subtitle} className="text-center md:text-center" />
         <Markdown content={about.metadata.content} />
         <div className="mx-auto mt-8 flex w-full justify-center space-x-4">
           <Button
