@@ -11,7 +11,7 @@
     @apply px-3 py-2 text-sm font-medium text-neutral-600 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300;
   }
   a.nav[aria-current] {
-    @apply font-bold text-black dark:text-white bg-white dark:bg-neutral-800 rounded-md;
+    @apply font-bold text-black dark:text-white bg-white dark:bg-neutral-700 rounded-md;
   }
   a.inline-link {
     @apply font-bold text-black underline decoration-teal-500 decoration-2 underline-offset-4 transition ease-in-out hover:text-teal-500 dark:text-white;
