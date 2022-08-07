@@ -18,7 +18,7 @@ const Nav = () => {
                   alt="Logo"
                 />
               </div>
-              <div className="block bg-neutral-200 rounded-xl">
+              <div className="block bg-neutral-200 rounded-xl py-4 px-3">
                 <div className="flex items-baseline space-x-4">
                   <NavLink href="/">
                     <a className="nav">Home</a>
