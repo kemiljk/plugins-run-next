@@ -19,7 +19,7 @@ const Nav = () => {
                 />
               </div>
               <div className="block bg-neutral-200 rounded-xl py-4 px-3">
-                <div className="flex items-baseline space-x-4">
+                <div className="flex items-baseline space-x-2">
                   <NavLink href="/">
                     <a className="nav">Home</a>
                   </NavLink>
