@@ -5,7 +5,7 @@ import Spacer from "./Spacer";
 const Nav = () => {
   return (
     <div className="min-h-full">
-      <div as="nav" className="bg-neutral-100 dark:bg-neutral-800">
+      <div as="nav" className="bg-white dark:bg-black">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
             <div className="flex w-full items-center justify-between">
