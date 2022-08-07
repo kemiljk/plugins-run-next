@@ -11,6 +11,7 @@ const Nav = () => {
             <div className="flex w-full items-center justify-between">
               <div className="flex flex-shrink-0 items-center border border-neutral-200 rounded-lg">
                 <Image
+                  className="rounded-lg"
                   height="32px"
                   width="32px"
                   src="/plugins-run.svg"
