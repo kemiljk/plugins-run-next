@@ -10,11 +10,11 @@
 }
 
 .markdown h2 {
-  @apply mt-4 mb-2 text-2xl font-bold leading-snug text-neutral-800 dark:text-neutral-200;
+  @apply pt-4 pb-1 text-2xl font-bold leading-snug text-neutral-800 dark:text-neutral-200;
 }
 
 .markdown h3 {
-  @apply mt-2 mb-1 text-xl font-bold leading-snug;
+  @apply pt-2 pb-1 text-xl font-bold leading-snug;
 }
 
 .markdown p a {
