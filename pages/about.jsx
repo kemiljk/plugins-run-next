@@ -18,7 +18,6 @@ const bucket = api.bucket({
 
 export default function About({ about }) {
   const metaTitle = "Plugins.run | About";
-  // const title = "What is Plugins.run?";
   return (
     <div className="mx-auto w-full max-w-3xl">
       <Head>
@@ -26,7 +25,6 @@ export default function About({ about }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <HeaderView>{about.title}</HeaderView>
-      {/* Wherever you want your markdown parsed, just insert this Markdown component and pass the desired content to the content prop */}
       <div className="px-4 lg:px-0">
       <Markdown content={about.metadata.subtitle} className="text-left md:text-center" />
         <Markdown content={about.metadata.content} />
