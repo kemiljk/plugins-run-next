@@ -67,10 +67,12 @@ export default function Home({ stats }) {
             const plugin_url = "https://www.figma.com/community/plugin/";
             const title = Object.entries(plugin.versions)[0][1].name;
             const afterRegex = /[^.]*$/gi;
-            const subtitle = Object.entries(plugin.versions)[0][1]
-              .description.substring(0, 90)
-              .replaceAll(afterRegex, "")
-              .replaceAll("<p>", "");
+            const fetchSubtitle = Object.entries(plugin.versions)[0][1]
+              .description;
+            const replacedText = fetchSubtitle
+              .substring(0, 90)
+              .replace(afterRegex, "");
+            const subtitle = replacedText.replaceAll("<p>", "");
             return (
               <PluginCard
                 key={plugin.id}
