@@ -69,10 +69,10 @@ export default function Home({ stats }) {
             const afterRegex = /[^.]*$/gi;
             const fetchSubtitle = Object.entries(plugin.versions)[0][1]
               .description;
-            const replacedText = fetchSubtitle
+            const strippedSubtitle = fetchSubtitle
               .substring(0, 90)
               .replace(afterRegex, "");
-            const subtitle = replacedText.replaceAll("<p>", "");
+            const subtitle = strippedSubtitle.replace("<p>", "");
             return (
               <PluginCard
                 key={plugin.id}
