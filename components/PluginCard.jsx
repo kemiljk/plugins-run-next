@@ -16,10 +16,6 @@ const PluginCard = ({
   installs,
   likes,
 }) => {
-  // const validTags = Object.entries(tags).map((entry) => {
-  //   return entry[1] === true ? entry[0] : null;
-  // });
-
   const kFormatter = (num) => {
     return Math.abs(num) > 999
       ? Math.sign(num) * (Math.abs(num) / 1000).toFixed(1) + "k"
@@ -28,13 +24,13 @@ const PluginCard = ({
 
   return (
     <a
-      className="space-y-2 rounded-xl border border-neutral-200 p-4 transition-all ease-in-out hover:cursor-pointer hover:border-teal-600 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-900
+      className="flex h-full flex-col space-y-2 rounded-xl border border-neutral-200 p-4 transition-all ease-in-out hover:cursor-pointer hover:border-teal-600 hover:bg-neutral-50 dark:border-neutral-700 dark:hover:bg-neutral-900
     "
       href={link}
       target="_blank"
       rel="noreferrer"
     >
-      <div className="flex w-full justify-between pb-2">
+      <div className="flex h-max w-full justify-between pb-2">
         <Image
           className="rounded"
           width={50}
@@ -44,14 +40,13 @@ const PluginCard = ({
         />
         <ExternalLinkIcon width={20} height={20} className="text-neutral-500" />
       </div>
-      <div className="flex flex-col w-full justify-between">
-      <div className="flex flex-col w-full">
+      <div className="flex h-full w-full flex-col justify-between">
         <headline className="text-md mr-2 block font-bold text-neutral-700 dark:text-neutral-200">
           {title}
         </headline>
-      <subheadline className="block font-mono text-sm text-neutral-500 dark:text-neutral-400">
-        {subtitle}
-      </subheadline>
+        <subheadline className="block h-max font-mono text-sm text-neutral-500 dark:text-neutral-400">
+          {subtitle}
+        </subheadline>
       </div>
       <div className="flex items-center justify-between pt-4">
         <div className="flex w-full items-center gap-2">
@@ -107,7 +102,6 @@ const PluginCard = ({
               </div>
             </div>
           )}
-        </div>
         </div>
       </div>
     </a>

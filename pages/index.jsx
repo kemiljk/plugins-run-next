@@ -72,7 +72,9 @@ export default function Home({ stats }) {
             const strippedSubtitle = fetchSubtitle
               .substring(0, 90)
               .replace(afterRegex, "");
-            const subtitle = strippedSubtitle.replace("<p>", "");
+            const subtitle = strippedSubtitle
+              .replace("<p>", "")
+              .replace("&amp;", "&");
             return (
               <PluginCard
                 key={plugin.id}
