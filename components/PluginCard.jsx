@@ -44,30 +44,15 @@ const PluginCard = ({
         />
         <ExternalLinkIcon width={20} height={20} className="text-neutral-500" />
       </div>
-      <div className="flex w-full items-center gap-2">
+      <div className="flex flex-col w-full justify-between">
+      <div className="flex flex-col w-full">
         <headline className="text-md mr-2 block font-bold text-neutral-700 dark:text-neutral-200">
           {title}
         </headline>
-        {/* {validTags.map((tag, id) => {
-          if (tag === null) return;
-          return (
-            <div
-              key={id}
-              className={classNames(
-                "flex w-max items-center justify-center rounded-lg border px-3 py-1 font-mono text-xs font-normal uppercase leading-tight",
-                tag === "figma"
-                  ? "border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900 dark:bg-blue-900/30 dark:text-blue-200"
-                  : "border border-pink-200 bg-pink-50 text-pink-700 dark:border-pink-900 dark:bg-pink-900/30 dark:text-pink-200"
-              )}
-            >
-              {tag === "figma" ? "Figma" : "FigJam"}
-            </div>
-          );
-        })} */}
-      </div>
       <subheadline className="block font-mono text-sm text-neutral-500 dark:text-neutral-400">
         {subtitle}
       </subheadline>
+      </div>
       <div className="flex items-center justify-between pt-4">
         <div className="flex w-full items-center gap-2">
           <div className="flex w-max items-center justify-center rounded-full border border-teal-200 bg-teal-50 px-3 py-1 font-mono text-xs font-normal uppercase leading-tight text-teal-700 hover:cursor-pointer dark:border-teal-900 dark:bg-teal-900/30 dark:text-teal-200">
@@ -88,7 +73,7 @@ const PluginCard = ({
                   "border-blue-200 bg-blue-50 text-blue-700 dark:border-blue-900 dark:bg-blue-900/30 dark:text-blue-200"
               )}
             >
-              {tags === "design" && "Figma"}
+              {"Figma"}
             </div>
           )}
           {tags === "whiteboard" && (
@@ -99,7 +84,7 @@ const PluginCard = ({
                   "border border-pink-200 bg-pink-50 text-pink-700 dark:border-pink-900 dark:bg-pink-900/30 dark:text-pink-200"
               )}
             >
-              {tags === "whiteboard" && "FigJam"}
+              {"FigJam"}
             </div>
           )}
           {tags === "design_and_whiteboard" && (
@@ -122,6 +107,7 @@ const PluginCard = ({
               </div>
             </div>
           )}
+        </div>
         </div>
       </div>
     </a>
