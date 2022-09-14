@@ -44,9 +44,9 @@ const PluginCard = ({
         <headline className="text-md mr-2 block font-bold text-neutral-700 dark:text-neutral-200">
           {title}
         </headline>
-        <subheadline className="block h-max font-mono text-sm text-neutral-500 dark:text-neutral-400">
+        <p className="block h-max font-mono text-sm text-neutral-500 dark:text-neutral-400">
           {subtitle}
-        </subheadline>
+        </p>
       </div>
       <div className="flex items-center justify-between pt-4">
         <div className="flex w-full items-center gap-2">

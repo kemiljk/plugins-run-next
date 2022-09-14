@@ -66,22 +66,20 @@ export default function Home({ stats }) {
           {stats.meta.map((plugin) => {
             const plugin_url = "https://www.figma.com/community/plugin/";
             const title = Object.entries(plugin.versions)[0][1].name;
-            const afterRegex = /[^.]*$/gi;
-            const fetchSubtitle = Object.entries(plugin.versions)[0][1]
-              .description;
-            const strippedSubtitle = fetchSubtitle
-              .substring(0, 90)
-              .replace(afterRegex, "");
-            const subtitle = strippedSubtitle
+            const afterRegex = /[^.]*$/;
+            const subtitle = Object.entries(plugin.versions)[0][1]
+              .description.substring(0, 100)
               .replace("<p>", "")
-              .replace("&amp;", "&");
+              .replace("&amp;", "&")
+              .replace(afterRegex, "");
+            console.log(subtitle);
             return (
               <PluginCard
                 key={plugin.id}
                 link={plugin_url + plugin.id}
                 image={plugin_url + plugin.id + "/icon"}
                 title={title}
-                subtitle={subtitle}
+                subtitle={subtitle.trim()}
                 installs={plugin.unique_run_count}
                 likes={plugin.like_count}
                 tags={plugin.editor_type}
@@ -134,5 +132,6 @@ export async function getStaticProps() {
       plugins,
       stats,
     },
+    revalidate: 3600,
   };
 }
