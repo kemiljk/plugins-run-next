@@ -26,70 +26,68 @@ export default function Home({ stats }) {
   const metaImage =
     "https://imgix.cosmicjs.com/a8c215c0-927a-11ec-9a4e-05fc85d83574-meta.png";
 
-  return (
-    <>
-      <Head>
-        <title>{metaTitle}</title>
-        <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+  return <>
+    <Head>
+      <title>{metaTitle}</title>
+      <meta name="description" content={description} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/favicon.ico" />
 
-        <meta name="title" content={metaTitle} />
-        <meta
-          name="description"
-          content="A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free."
-        />
+      <meta name="title" content={metaTitle} />
+      <meta
+        name="description"
+        content="A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free."
+      />
 
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.plugins.run" />
-        <meta property="og:title" content={metaTitle} />
-        <meta
-          property="og:description"
-          content="A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free."
-        />
-        <meta property="og:image" content={metaImage} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.plugins.run" />
+      <meta property="og:title" content={metaTitle} />
+      <meta
+        property="og:description"
+        content="A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free."
+      />
+      <meta property="og:image" content={metaImage} />
 
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.plugins.run" />
-        <meta property="twitter:title" content={metaTitle} />
-        <meta
-          property="twitter:description"
-          content="A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free."
-        />
-        <meta property="twitter:image" content={metaImage} />
-      </Head>
-      <Logo />
-      <HeaderView>{title}</HeaderView>
-      <SubheaderView>{subtitle}</SubheaderView>
-      <div className="flex-col px-4 lg:px-0">
-        <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-          {stats.meta.map((plugin) => {
-            const plugin_url = "https://www.figma.com/community/plugin/";
-            const title = Object.entries(plugin.versions)[0][1].name;
-            const afterRegex = /[^.]*$/;
-            const subtitle = Object.entries(plugin.versions)[0][1]
-              .description.substring(0, 100)
-              .replace("<p>", "")
-              .replace("&amp;", "&")
-              .replace(afterRegex, "");
-            console.log(subtitle);
-            return (
-              <PluginCard
-                key={plugin.id}
-                link={plugin_url + plugin.id}
-                image={plugin_url + plugin.id + "/icon"}
-                title={title}
-                subtitle={subtitle.trim()}
-                installs={plugin.unique_run_count}
-                likes={plugin.like_count}
-                tags={plugin.editor_type}
-              />
-            );
-          })}
-        </div>
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content="https://www.plugins.run" />
+      <meta property="twitter:title" content={metaTitle} />
+      <meta
+        property="twitter:description"
+        content="A series of simple utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies. All for free."
+      />
+      <meta property="twitter:image" content={metaImage} />
+    </Head>
+    <Logo />
+    <HeaderView>{title}</HeaderView>
+    <SubheaderView>{subtitle}</SubheaderView>
+    <div className="flex-col px-4 lg:px-0">
+      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+        {stats.meta.map((plugin) => {
+          const plugin_url = "https://www.figma.com/community/plugin/";
+          const title = Object.entries(plugin.versions)[0][1].name;
+          const afterRegex = /[^.]*$/;
+          const subtitle = Object.entries(plugin.versions)[0][1]
+            .description.substring(0, 100)
+            .replace("<p>", "")
+            .replace("&amp;", "&")
+            .replace(afterRegex, "");
+          console.log(subtitle);
+          return (
+            <PluginCard
+              key={plugin.id}
+              link={plugin_url + plugin.id}
+              image={plugin_url + plugin.id + "/icon"}
+              title={title}
+              subtitle={subtitle.trim()}
+              installs={plugin.unique_run_count}
+              likes={plugin.like_count}
+              tags={plugin.editor_type}
+            />
+          );
+        })}
       </div>
-    </>
-  );
+    </div>
+  </>;
 }
 
 export async function getStaticProps() {

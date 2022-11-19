@@ -1,6 +1,6 @@
 import markdownStyles from "../styles/markdown-styles.module.css";
 import ReactMarkdown from "react-markdown";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import classnames from "classnames";
 
 // our components object lets us pass custom React components into our ReactMarkdown.

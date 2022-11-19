@@ -1,6 +1,5 @@
 import Head from "next/head";
 import HeaderView from "../components/HeaderView";
-import SubheaderView from "../components/SubheaderView";
 import Button from "../components/Button";
 import Markdown from "../components/Markdown";
 import { CursorClickIcon, MailIcon } from "@heroicons/react/outline";
@@ -26,7 +25,10 @@ export default function About({ about }) {
       </Head>
       <HeaderView>{about.title}</HeaderView>
       <div className="px-4 lg:px-0">
-      <Markdown content={about.metadata.subtitle} className="text-left md:text-center" />
+        <Markdown
+          content={about.metadata.subtitle}
+          className="text-left md:text-center"
+        />
         <Markdown content={about.metadata.content} />
         <div className="mx-auto mt-8 flex w-full justify-center space-x-4">
           <Button
