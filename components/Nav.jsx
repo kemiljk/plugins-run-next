@@ -4,7 +4,7 @@ import Spacer from "./Spacer";
 
 const Nav = () => {
   return (
-    <div className="fixed w-full top-0 z-50">
+    <div className="fixed top-0 z-50 w-full">
       <div as="nav" className="bg-white dark:bg-black">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex h-16 items-center justify-between">
@@ -12,13 +12,13 @@ const Nav = () => {
               <div className="flex flex-shrink-0 items-center ">
                 <Image
                   className="rounded-lg"
-                  height="32px"
-                  width="32px"
+                  height={32}
+                  width={32}
                   src="/plugins-run.svg"
                   alt="Logo"
                 />
               </div>
-              <div className="block bg-neutral-200 dark:bg-neutral-900 dark:border dark:border-neutral-800 rounded-[10px] py-1 px-1">
+              <div className="block rounded-[10px] bg-neutral-200 py-1 px-1 dark:border dark:border-neutral-800 dark:bg-neutral-900">
                 <div className="flex items-baseline space-x-2">
                   <NavLink href="/">
                     <a className="nav">Home</a>
