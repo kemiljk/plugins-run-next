@@ -75,7 +75,7 @@ export default async function Home() {
       <Logo />
       <HeaderView>{title}</HeaderView>
       <SubheaderView>{subtitle}</SubheaderView>
-      <div className="mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="px-2 md:px-0 mt-2 grid grid-cols-1 gap-4 md:grid-cols-2">
         {stats.meta.map((plugin) => {
           const plugin_url = "https://www.figma.com/community/plugin/";
           const title = Object.entries(plugin.versions)[0][1].name;
