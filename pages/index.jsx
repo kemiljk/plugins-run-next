@@ -86,6 +86,7 @@ export default function Home({ stats }) {
           );
         })}
       </div>
+      <a rel="me" href="https://mastodon.design/@kejk" className="opacity-0 cursor-none">Mastodon</a>
     </div>
   </>;
 }
