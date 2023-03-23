@@ -6,6 +6,9 @@ const nextConfig = {
   images: {
     domains: ["imgix.cosmicjs.com", "www.figma.com"],
   },
+  experimental: {
+    appDir: true,
+  },
 };
 
 module.exports = nextConfig;

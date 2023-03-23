@@ -1,6 +1,25 @@
-import Image from "next/legacy/image";
-import NavLink from "./NavLink";
+"use client";
+
+import Image from "next/image";
+// import NavLink from "./NavLink";
+import Link from "next/link";
+import { Tab } from "@headlessui/react";
 import Spacer from "./Spacer";
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(" ");
+}
+
+const tabItems = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+];
 
 const Nav = () => {
   return (
@@ -18,16 +37,27 @@ const Nav = () => {
                   alt="Logo"
                 />
               </div>
-              <div className="block rounded-[10px] bg-neutral-200 py-1 px-1 dark:border dark:border-neutral-800 dark:bg-neutral-900">
-                <div className="flex items-baseline space-x-2">
-                  <NavLink href="/">
-                    <a className="nav">Home</a>
-                  </NavLink>
-                  <NavLink href="/about">
-                    <a className="nav">About</a>
-                  </NavLink>
-                </div>
-              </div>
+              <Tab.Group className="block space-x-2 rounded-[10px] bg-neutral-200 py-1 px-1 dark:border dark:border-neutral-800 dark:bg-neutral-900">
+                <Tab.List>
+                  {tabItems.map((item, idx) => (
+                    <Link href={item.href} key={idx}>
+                      <Tab
+                        className={({ selected }) =>
+                          classNames(
+                            "rounded px-3 py-2 text-sm font-medium text-neutral-600 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300",
+                            "ring-white ring-opacity-60 ring-offset-2 ring-offset-teal-500 focus:outline-none focus:ring-2",
+                            selected
+                              ? "bg-white shadow hover:text-white dark:text-black dark:hover:text-black"
+                              : "hover:bg-white/[0.12] hover:text-black dark:hover:text-white"
+                          )
+                        }
+                      >
+                        {item.name}
+                      </Tab>
+                    </Link>
+                  ))}
+                </Tab.List>
+              </Tab.Group>
               <Spacer />
             </div>
           </div>
