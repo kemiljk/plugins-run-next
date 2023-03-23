@@ -45,7 +45,7 @@ const Nav = () => {
                         className={({ selected }) =>
                           classNames(
                             "rounded px-3 py-2 text-sm font-medium text-neutral-600 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300",
-                            "ring-white ring-opacity-60 ring-offset-2 ring-offset-teal-500 focus:outline-none focus:ring-2",
+                            "focus:border focus:border-teal-500 focus:outline-none",
                             selected
                               ? "bg-white shadow hover:text-white dark:text-black dark:hover:text-black"
                               : "hover:bg-white/[0.12] hover:text-black dark:hover:text-white"
