@@ -47,7 +47,7 @@ const Nav = () => {
                             "rounded px-3 py-2 text-sm font-medium text-neutral-600 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300",
                             "focus:border focus:border-teal-500 focus:outline-none",
                             selected
-                              ? "bg-white shadow hover:text-white dark:text-black dark:hover:text-black"
+                              ? "bg-white shadow text-black"
                               : "hover:bg-white/[0.12] hover:text-black dark:hover:text-white"
                           )
                         }
