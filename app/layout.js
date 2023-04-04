@@ -10,6 +10,7 @@ const sans = Space_Grotesk({
 
 const mono = Space_Mono({
   subsets: ["latin"],
+  weights: ["400", "700"]
 });
 
 export default function RootLayout({ children }) {
