@@ -2,13 +2,13 @@ import Nav from "../components/Nav";
 import "../styles/globals.css";
 import "../styles/markdown-styles.module.css";
 import PlausibleProvider from "next-plausible";
-import { spaceMono, spaceGrotesk } from "@next/font/google";
+import { Space_Mono, Space_Grotesk } from "@next/font/google";
 
-const sans = spaceGrotesk({
+const sans = Space_Grotesk({
   subsets: ["latin"],
 });
 
-const mono = spaceMono({
+const mono = Space_Mono({
   subsets: ["latin"],
 });
 
