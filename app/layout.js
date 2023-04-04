@@ -18,7 +18,7 @@ inspiration, and the strongest man I've ever known. My father. I love
 you Dad ❤️.`;
 
   return (
-    <html lang="en" className={`${spaceGrotesk.className} ${spaceMono.className}`}>
+    <html lang="en" className={`${sans.className} ${mono.className}`}>
       <head />
       <PlausibleProvider domain="plugins.run">
       <body className="bg-white dark:bg-black">
