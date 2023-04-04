@@ -1,6 +1,7 @@
 import Nav from "../components/Nav";
 import "../styles/globals.css";
 import "../styles/markdown-styles.module.css";
+import PlausibleProvider from "next-plausible";
 
 export default function RootLayout({ children }) {
   const text = `This site, and all of my work, is dedicated to my hero, my
@@ -10,6 +11,7 @@ you Dad ❤️.`;
   return (
     <html>
       <head />
+      <PlausibleProvider domain="plugins.run">
       <body className="bg-white dark:bg-black">
         <div className="mb-8">
           <Nav />
@@ -23,6 +25,7 @@ you Dad ❤️.`;
           </div>
         </div>
       </body>
+      </PlausibleProvider> 
     </html>
   );
 }
