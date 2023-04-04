@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@cosmicjs/sdk": "^0.2.1",
+    "@cosmicjs/sdk": "^1.0.5",
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^1.0.6",
     "@next/font": "^13.2.4",
