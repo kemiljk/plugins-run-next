@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-// import NavLink from "./NavLink";
 import Link from "next/link";
 import { Tab } from "@headlessui/react";
 import Spacer from "./Spacer";

@@ -11,8 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Figtree", ...defaultTheme.fontFamily.sans],
-        mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
+        sans: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
+        mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
       },
     },
   },

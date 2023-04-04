@@ -2,6 +2,15 @@ import Nav from "../components/Nav";
 import "../styles/globals.css";
 import "../styles/markdown-styles.module.css";
 import PlausibleProvider from "next-plausible";
+import { spaceMono, spaceGrotesk } from "@next/font/google";
+
+const sans = spaceGrotesk({
+  subsets: ["latin"],
+});
+
+const mono = spaceMono({
+  subsets: ["latin"],
+});
 
 export default function RootLayout({ children }) {
   const text = `This site, and all of my work, is dedicated to my hero, my
@@ -9,7 +18,7 @@ inspiration, and the strongest man I've ever known. My father. I love
 you Dad ❤️.`;
 
   return (
-    <html>
+    <html lang="en" className={`${spaceGrotesk.className} ${spaceMono.className}`}>
       <head />
       <PlausibleProvider domain="plugins.run">
       <body className="bg-white dark:bg-black">
