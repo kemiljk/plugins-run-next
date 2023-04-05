@@ -38,7 +38,7 @@ export default async function About() {
           className="text-left md:text-center"
         />
         <Markdown content={about.metadata.content} />
-        <div className="flex flex-col md:flex-row mx-auto mt-8 flex w-full justify-center space-x-4 pt-8">
+        <div className="flex flex-col md:flex-row mx-auto mt-8 flex w-full justify-center space-y-2 md:space-y-0 md:space-x-4 pt-8">
           <Button
             bgColor="neutral-100"
             textColor="black"
