@@ -2,9 +2,9 @@ import Nav from "../components/Nav";
 import "../styles/globals.css";
 import "../styles/markdown-styles.module.css";
 import PlausibleProvider from "next-plausible";
-import { Space_Mono, Inter_Tight } from "@next/font/google";
+import { Space_Mono, Schibsted_Grotesk } from "@next/font/google";
 
-const sans = Inter_Tight({
+const sans = Schibsted_Grotesk({
   subsets: ["latin"],
 });
 
