@@ -10,17 +10,16 @@ const BUCKET_SLUG = process.env.NEXT_PUBLIC_COSMIC_SLUG;
 const READ_KEY = process.env.NEXT_PUBLIC_COSMIC_READ_KEY;
 
 const cosmic = createBucketClient({
-  slug: BUCKET_SLUG,
+  bucketSlug: BUCKET_SLUG,
   readKey: READ_KEY,
 });
 
 export default async function About() {
-
   const data = await cosmic.objects
-      .findOne({
-            id: "641b3fead0ab1034f2469bf2",
-          })
-      .props("title,metadata");
+    .findOne({
+      id: "641b3fead0ab1034f2469bf2",
+    })
+    .props("title,metadata");
 
   const about = await data.object;
 
@@ -38,7 +37,7 @@ export default async function About() {
           className="text-left md:text-center"
         />
         <Markdown content={about.metadata.content} />
-        <div className="flex flex-col md:flex-row mx-auto mt-8 flex w-full justify-center space-x-4 pt-8">
+        <div className="mx-auto mt-8 flex w-full flex-col justify-center space-y-2 pt-8 md:flex-row md:space-y-0 md:space-x-4">
           <Button
             bgColor="neutral-100"
             textColor="black"
