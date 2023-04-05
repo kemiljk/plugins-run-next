@@ -1,16 +1,16 @@
 .markdown {
-  @apply md:text-lg font-sans;
+  @apply font-sans text-sm;
 }
 
 .markdown p,
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply pb-4 text-neutral-500 dark:text-neutral-300;
+  @apply pb-4 text-sm text-neutral-500 dark:text-neutral-300;
 }
 
 .markdown h2 {
-  @apply pt-4 pb-1 text-2xl font-bold leading-snug text-neutral-800 dark:text-neutral-200;
+  @apply pt-4 pb-1 text-2xl font-bold leading-snug tracking-wide text-neutral-800 dark:text-neutral-200;
 }
 
 .markdown h3 {
@@ -18,13 +18,13 @@
 }
 
 .markdown p a {
-  @apply font-bold text-black underline decoration-teal-500 decoration-2 underline-offset-4 transition ease-in-out hover:text-teal-500 dark:text-white font-mono;
+  @apply font-mono font-bold text-black underline decoration-teal-500 decoration-2 underline-offset-4 transition ease-in-out hover:text-teal-500 dark:text-white;
 }
 
 .markdown ul li {
-  @apply mb-2 list-inside list-disc rounded p-2 text-[16px] font-semibold shadow-md md:text-[18px];
+  @apply mb-2 list-inside list-disc rounded p-2;
 }
 
 .markdown ol li {
-  @apply mb-2 list-inside list-decimal rounded p-2 text-[16px] font-semibold md:text-[18px];
+  @apply mb-2 list-inside list-decimal rounded p-2;
 }

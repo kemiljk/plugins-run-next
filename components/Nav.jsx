@@ -36,17 +36,17 @@ const Nav = () => {
                   alt="Logo"
                 />
               </div>
-              <Tab.Group className="block space-x-2 rounded-[10px] bg-neutral-200 py-1 px-1 dark:border dark:border-neutral-800 dark:bg-neutral-900">
+              <Tab.Group className="block justify-center space-x-2 rounded-[10px] bg-neutral-200 py-1 px-1 dark:border dark:border-neutral-800 dark:bg-neutral-900">
                 <Tab.List>
                   {tabItems.map((item, idx) => (
                     <Link href={item.href} key={idx}>
                       <Tab
                         className={({ selected }) =>
                           classNames(
-                            "rounded px-3 py-2 text-sm font-medium text-neutral-600 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300 border border-transparent",
+                            "rounded border border-transparent px-3 py-2 font-black text-neutral-600 hover:text-neutral-700 dark:text-neutral-400 dark:hover:text-neutral-300",
                             "focus:border focus:border-teal-500 focus:outline-none",
                             selected
-                              ? "bg-white shadow text-black dark:bg-neutral-700 dark:text-white"
+                              ? "bg-white text-black shadow dark:bg-neutral-700 dark:text-white"
                               : "hover:bg-white/[0.12] hover:text-black dark:hover:text-white"
                           )
                         }

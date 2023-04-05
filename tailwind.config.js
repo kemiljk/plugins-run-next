@@ -11,8 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Schibsted Grotesk", ...defaultTheme.fontFamily.sans],
-        mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
+        sans: ["var(--font-sans)", ...defaultTheme.fontFamily.sans],
+        mono: ["var(--font-mono)", ...defaultTheme.fontFamily.mono],
       },
     },
   },

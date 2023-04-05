@@ -40,11 +40,11 @@ const PluginCard = ({
         />
         <ExternalLinkIcon width={20} height={20} className="text-neutral-500" />
       </div>
-      <div className="flex h-full w-full flex-col justify-between">
+      <div className="flex h-full w-full flex-col justify-start">
         <headline className="text-md mr-2 block font-bold text-neutral-700 dark:text-neutral-200">
           {title}
         </headline>
-        <p className="block h-max font-mono text-sm text-neutral-500 dark:text-neutral-400">
+        <p className="block h-max text-sm leading-relaxed tracking-wide text-neutral-500 dark:text-neutral-400 md:text-base">
           {subtitle}
         </p>
       </div>
