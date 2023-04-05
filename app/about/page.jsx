@@ -16,7 +16,7 @@ const cosmic = createBucketClient({
 
 export default async function About() {
 
-      const data = await cosmic.objects
+  const data = await cosmic.objects
       .findOne({
             id: "641b3fead0ab1034f2469bf2",
           })
