@@ -11,7 +11,7 @@ const READ_KEY = process.env.NEXT_PUBLIC_COSMIC_READ_KEY;
 
 const cosmic = createBucketClient({
   slug: BUCKET_SLUG,
-  read_key: READ_KEY,
+  readKey: READ_KEY,
 });
 
 export default async function About() {
@@ -38,7 +38,7 @@ export default async function About() {
           className="text-left md:text-center"
         />
         <Markdown content={about.metadata.content} />
-        <div className="mx-auto mt-8 flex w-full justify-center space-x-4 pt-8">
+        <div className="flex flex-col md:flex-row mx-auto mt-8 flex w-full justify-center space-x-4 pt-8">
           <Button
             bgColor="neutral-100"
             textColor="black"
