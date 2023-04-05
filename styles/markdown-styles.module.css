@@ -1,12 +1,12 @@
 .markdown {
-  @apply font-sans text-sm;
+  @apply font-sans;
 }
 
 .markdown p,
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply pb-4 text-sm text-neutral-500 dark:text-neutral-300;
+  @apply pb-4  text-neutral-500 dark:text-neutral-300;
 }
 
 .markdown h2 {
