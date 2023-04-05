@@ -10,7 +10,7 @@ const BUCKET_SLUG = process.env.NEXT_PUBLIC_COSMIC_SLUG;
 const READ_KEY = process.env.NEXT_PUBLIC_COSMIC_READ_KEY;
 
 const cosmic = createBucketClient({
-  slug: BUCKET_SLUG,
+  bucketSlug: BUCKET_SLUG,
   readKey: READ_KEY,
 });
 
