@@ -3,30 +3,23 @@ import HeaderView from "../../components/HeaderView";
 import Button from "../../components/Button";
 import Markdown from "../../components/Markdown";
 import { CursorClickIcon, MailIcon } from "@heroicons/react/outline";
-// import { createBucketClient } from "@cosmicjs/sdk";
 
-const Cosmic = require("cosmicjs");
-const api = Cosmic();
+const { createBucketClient } = require("@cosmicjs/sdk");
 
 const BUCKET_SLUG = process.env.NEXT_PUBLIC_COSMIC_SLUG;
 const READ_KEY = process.env.NEXT_PUBLIC_COSMIC_READ_KEY;
 
-const bucket = api.bucket({
+const cosmic = createBucketClient({
   slug: BUCKET_SLUG,
   read_key: READ_KEY,
 });
 
-// const cosmic = createBucketClient({
-//   slug: BUCKET_SLUG,
-//   read_key: READ_KEY,
-// });
-
 export default async function About() {
-  const data = await bucket.objects
+  const data = await cosmic.objects
     .findOne({
       id: "641b3fead0ab1034f2469bf2",
     })
-    .props(["title,content,metadata"]);
+    .props("title,content,metadata");
 
   const about = await data.object;
 
