@@ -5,6 +5,8 @@ import SubheaderView from "../components/SubheaderView";
 import PluginCard from "../components/PluginCard";
 import Logo from "../components/Logo";
 
+export const revalidate = 3600
+
 export default async function Home() {
   const res = await fetch(
     "https://www.figma.com/api/plugins/profile/3878431?",
