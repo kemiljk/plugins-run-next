@@ -10,15 +10,15 @@
 }
 
 .markdown h2 {
-  @apply pt-4 pb-1 text-2xl font-bold leading-snug tracking-wide text-neutral-800 dark:text-neutral-200;
+  @apply pb-1 pt-4 text-2xl font-bold leading-snug tracking-wide text-neutral-800 dark:text-neutral-200;
 }
 
 .markdown h3 {
-  @apply pt-2 pb-1 text-xl font-bold leading-snug;
+  @apply pb-1 pt-2 text-xl font-bold leading-snug;
 }
 
 .markdown p a {
-  @apply font-mono font-bold text-black underline decoration-teal-500 decoration-2 underline-offset-4 transition ease-in-out hover:text-teal-500 dark:text-white;
+  @apply font-mono text-sm font-bold text-black underline decoration-teal-500 decoration-2 underline-offset-4 transition ease-in-out hover:text-teal-500 dark:text-white;
 }
 
 .markdown ul li {
