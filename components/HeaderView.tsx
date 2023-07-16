@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function HeaderView({ children }) {
+export default function HeaderView({ children }: { children: React.ReactNode }) {
   return (
     <header className='mx-auto w-full'>
       <div className='flex w-full justify-start px-4 pt-12 sm:px-6 md:justify-center lg:px-8'>
