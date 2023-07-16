@@ -6,15 +6,15 @@
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
-  @apply pb-4  text-neutral-500 dark:text-neutral-300;
+  @apply leading-7 [&:not(:first-child)]:mt-6;
 }
 
 .markdown h2 {
-  @apply pb-1 pt-4 text-2xl font-bold leading-snug tracking-wide text-neutral-800 dark:text-neutral-200;
+  @apply mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0;
 }
 
 .markdown h3 {
-  @apply pb-1 pt-2 text-xl font-bold leading-snug;
+  @apply mt-8 scroll-m-20 text-2xl font-semibold tracking-tight;
 }
 
 .markdown p a {
