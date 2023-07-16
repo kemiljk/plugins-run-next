@@ -78,7 +78,7 @@ export default async function About() {
     <div className='mx-auto w-full max-w-3xl'>
       <HeaderView>{about.title}</HeaderView>
       <div className='px-4 lg:px-0'>
-        <Markdown content={about.metadata.subtitle} className='text-left md:text-center' />
+        <Markdown content={about.metadata.subtitle} className='text-left md:text-center mb-8' />
         <Markdown content={about.metadata.content} />
         <div className='mx-auto mt-8 flex w-full flex-col justify-center space-y-2 pt-8 md:flex-row md:space-x-4 md:space-y-0'>
           <Button bgColor='neutral-100' textColor='black' borderColor='neutral-200' darkBgColor='neutral-800' darkTextColor='white' darkBorderColor='neutral-700'>
