@@ -8,9 +8,9 @@ function classNames(...classes) {
 }
 
 const PluginCard: React.FC<PluginCardProps> = ({ subtitle, image, link, tags, installs, likes }) => {
-  const kFormatter = (num: number) => {
+ const kFormatter = (num: number) => {
   const formattedNum = Math.abs(num) > 999 ? (Math.sign(num) * Math.abs(num)) / 1000 : Math.sign(num) * Math.abs(num);
-  return formattedNum > 999 ? formattedNum.toFixed(1) : formattedNum;
+  return Math.abs(num) > 999 ? formattedNum.toFixed(1) : formattedNum;
 };
 
   return (
