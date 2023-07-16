@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  p {
-    @apply pt-4 font-sans text-neutral-500 dark:text-neutral-300;
-  }
-}
-
 @layer components {
   .inline-link {
     @apply font-mono font-bold text-black underline decoration-teal-500 decoration-2 underline-offset-4 transition ease-in-out hover:text-teal-500 dark:text-white;
