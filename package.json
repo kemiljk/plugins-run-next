@@ -11,29 +11,29 @@
   "dependencies": {
     "@cosmicjs/sdk": "^1.0.9",
     "@radix-ui/react-tabs": "^1.0.4",
-    "class-variance-authority": "^0.6.1",
+    "class-variance-authority": "latest",
     "classnames": "^2.3.1",
     "clsx": "^2.0.0",
     "init": "^0.1.2",
-    "lucide-react": "^0.260.0",
-    "next": "^13.4.10",
+    "lucide-react": "latest",
+    "next": "latest",
     "next-plausible": "^3.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-markdown": "^8.0.7",
-    "tailwind-merge": "^1.14.0",
+    "react-markdown": "latest",
+    "tailwind-merge": "latest",
     "tailwindcss-animate": "^1.0.6"
   },
   "devDependencies": {
-    "@types/node": "20.4.2",
-    "@types/react": "18.2.15",
+    "@types/node": "^20.10.4",
+    "@types/react": "^18.2.43",
     "autoprefixer": "^10.4.14",
-    "eslint": "8.20.0",
-    "eslint-config-next": "^13.0.4",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
     "postcss": "^8.4.21",
-    "prettier": "^2.7.1",
-    "prettier-plugin-tailwindcss": "^0.1.12",
+    "prettier": "latest",
+    "prettier-plugin-tailwindcss": "latest",
     "tailwindcss": "^3.3.3",
-    "typescript": "5.1.6"
+    "typescript": "latest"
   }
 }

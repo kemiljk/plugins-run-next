@@ -3,33 +3,24 @@ import Nav from '@/components/Nav';
 import '../styles/globals.css';
 import '../styles/markdown-styles.module.css';
 import PlausibleProvider from 'next-plausible';
+import KKSans from 'next/font/local';
 import Formula from 'next/font/local';
 import Supply_Mono from 'next/font/local';
 
-const sans = Formula({
+const sans = KKSans({
+  src: '../fonts/KKSansVF.woff2',
+  variable: '--font-sans',
+});
+
+const display = Formula({
   src: [
-    {
-      path: '../fonts/PPRadioGrotesk-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/PPRadioGrotesk-RegularItalic.woff2',
-      weight: '400',
-      style: 'italic',
-    },
-    {
-      path: '../fonts/PPRadioGrotesk-Black.woff2',
-      weight: '900',
-      style: 'normal',
-    },
     {
       path: '../fonts/PPFormula-ExtendedBold.woff2',
       weight: '700',
       style: 'normal',
     },
   ],
-  variable: '--font-sans',
+  variable: '--font-display',
 });
 
 const mono = Supply_Mono({
@@ -54,7 +45,7 @@ inspiration, and the strongest man I've ever known. My father. I love
 you Dad ❤️.`;
 
   return (
-    <html lang='en' className={`${sans.variable} ${mono.variable} font-sans`}>
+    <html lang='en' className={`${sans.variable} ${display.variable} ${mono.variable} font-sans`}>
       <head />
       <PlausibleProvider domain='plugins.run'>
         <body className='bg-white dark:bg-black'>
