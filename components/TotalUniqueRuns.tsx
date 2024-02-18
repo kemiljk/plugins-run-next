@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Stats } from '@/lib/types';
 
-const TotalUniqueRuns = ({ stats }: Stats) => {
+const TotalUniqueRuns = ({ stats }: { stats: Stats }) => {
   const [totalUniqueRunCount, setTotalUniqueRunCount] = useState(0);
 
   useEffect(() => {
