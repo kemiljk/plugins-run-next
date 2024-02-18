@@ -6,7 +6,7 @@ import Logo from '@/components/Logo';
 import TotalUniqueRuns from '@/components/TotalUniqueRuns';
 import { Plugin, Stats } from '@/lib/types';
 
-export const revalidate = 60;
+export const revalidate = 0;
 
 export async function generateMetadata() {
   const metaTitle = 'Plugins.run | Home';
