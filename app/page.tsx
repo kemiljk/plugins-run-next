@@ -82,7 +82,6 @@ export default async function Home() {
 
   const stats: Stats = await res.json();
   const title: string = 'The home for Figma utility plugins';
-  const subtitle: string = `A series of free utility plugins, downloaded over ${TotalUniqueRuns} times, that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies.`;
 
   return (
     <div>
@@ -90,7 +89,9 @@ export default async function Home() {
         <Logo className={'w-[300px] text-black dark:text-white'} />
       </div>
       <HeaderView>{title}</HeaderView>
-      <SubheaderView>{subtitle}</SubheaderView>
+      <SubheaderView>A series of free utility plugins, downloaded over 
+      <TotalUniqueRuns stats={stats} /> 
+      times, that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies.</SubheaderView>
       <div className='mt-2 grid grid-cols-1 gap-4 px-4 md:grid-cols-2 md:px-0'>
         {stats.meta.map((plugin: Plugin) => {
           const plugin_url = 'https://www.figma.com/community/plugin/';
