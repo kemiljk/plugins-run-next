@@ -5,7 +5,7 @@ import '../styles/markdown-styles.module.css';
 import PlausibleProvider from 'next-plausible';
 import KKSans from 'next/font/local';
 import Formula from 'next/font/local';
-import Supply_Mono from 'next/font/local';
+import { JetBrains_Mono } from 'next/font/google';
 
 const sans = KKSans({
   src: '../fonts/KKSansVF.woff2',
@@ -23,19 +23,7 @@ const display = Formula({
   variable: '--font-display',
 });
 
-const mono = Supply_Mono({
-  src: [
-    {
-      path: '../fonts/InputSans-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: '../fonts/InputSans-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-  ],
+const mono = JetBrains_Mono({
   variable: '--font-mono',
 });
 
