@@ -24,7 +24,8 @@ const display = Formula({
 });
 
 const mono = JetBrains_Mono({
-  variable: '--font-mono',
+  subsets: ['latin'],
+  variable: '--font-mono', 
 });
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
