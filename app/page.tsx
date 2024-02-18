@@ -3,6 +3,7 @@ import HeaderView from '@/components/HeaderView';
 import SubheaderView from '@/components/SubheaderView';
 import PluginCard from '@/components/PluginCard';
 import Logo from '@/components/Logo';
+import TotalUniqueRuns from '@/components/TotalUniqueRuns';
 import { Plugin, Stats } from '@/lib/types';
 
 export const revalidate = 60;
@@ -81,7 +82,7 @@ export default async function Home() {
 
   const stats: Stats = await res.json();
   const title: string = 'The home for Figma utility plugins';
-  const subtitle: string = 'A series of free utility plugins that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies.';
+  const subtitle: string = `A series of free utility plugins, downloaded over ${TotalUniqueRuns} times, that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies.`;
 
   return (
     <div>
