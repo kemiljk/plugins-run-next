@@ -10,9 +10,11 @@ const TotalUniqueRuns = ({ stats }: { stats: Stats }) => {
     const total = stats.meta.reduce((acc, plugin) => acc + plugin.unique_run_count, 0);
     setTotalUniqueRunCount(total);
   }, [stats]);
+  
+  const formattedTotal = totalUniqueRunCount.toLocaleString('en-US');
 
   return (
-    <span>{totalUniqueRunCount}</span>
+    <span className="mx-1 font-bold">{formattedTotal}</span>
   )
 }
 
