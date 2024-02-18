@@ -14,7 +14,7 @@ const TotalUniqueRuns = ({ stats }: { stats: Stats }) => {
   const formattedTotal = totalUniqueRunCount.toLocaleString('en-US');
 
   return (
-    <span className="mx-1 font-bold">{formattedTotal}</span>
+    <span className="mx-1 font-bold font-display">{formattedTotal}</span>
   )
 }
 
