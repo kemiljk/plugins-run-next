@@ -89,7 +89,7 @@ export default async function Home() {
         <Logo className={'w-[300px] text-black dark:text-white'} />
       </div>
       <HeaderView>{title}</HeaderView>
-      <SubheaderView>A series of free utility plugins, downloaded over 
+      <SubheaderView>A series of free utility plugins, downloaded 
       <TotalUniqueRuns stats={stats} /> 
       times, that allow you as a designer or developer to easily manage your day-to-day workflow and improve your efficiencies.</SubheaderView>
       <div className='mt-2 grid grid-cols-1 gap-4 px-4 md:grid-cols-2 md:px-0'>
