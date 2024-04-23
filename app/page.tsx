@@ -86,7 +86,7 @@ export default async function Home() {
   return (
     <div>
       <div className="flex w-full flex-col items-center justify-center pt-16">
-        <span className={"font-black text-4xl md:text-7xl tracking-tighter text-zinc-800 dark:text-zinc-50"}>
+        <span className={"font-black text-5xl md:text-7xl tracking-tighter text-zinc-800 dark:text-zinc-50"}>
           Plugins<span className="text-gray-400">.</span>run
         </span>
       </div>
