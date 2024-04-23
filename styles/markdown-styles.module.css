@@ -10,11 +10,11 @@
 }
 
 .markdown h2 {
-  @apply mt-10 scroll-m-20 border-b pb-2 text-3xl font-medium tracking-tight transition-colors border-neutral-200 dark:border-neutral-800 first:mt-0 text-neutral-950 dark:text-neutral-50;
+  @apply mt-10 scroll-m-20 border-b pb-2 text-3xl font-bold tracking-tight transition-colors border-neutral-200 dark:border-neutral-800 first:mt-0 text-neutral-950 dark:text-neutral-50;
 }
 
 .markdown h3 {
-  @apply mt-8 scroll-m-20 text-2xl font-medium tracking-tight text-neutral-950 dark:text-neutral-50;
+  @apply mt-8 scroll-m-20 text-2xl font-bold tracking-tight text-neutral-950 dark:text-neutral-50;
 }
 
 .markdown p a {
